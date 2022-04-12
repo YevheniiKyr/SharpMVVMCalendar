@@ -1,0 +1,21 @@
+﻿<Window x:Class="Calendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calendar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DatePicker HorizontalAlignment="Left" Margin="291,80,0,0" VerticalAlignment="Top" Height="31" Width="115" SelectedDate="{Binding Birthdate ,  UpdateSourceTrigger=PropertyChanged}"   />
+        
+        <TextBlock HorizontalAlignment="Left" Margin="215,150,0,0" TextWrapping="Wrap" Text="Age" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="186,184,0,0" TextWrapping="Wrap" Text="ChineseZodiac" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="187,216,0,0" TextWrapping="Wrap" Text="WesternZodiac" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="291,149,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"  Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}"  />
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="291,183,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding ChineseZodiac}"/>
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="291,216,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Text="{Binding WesternZodiac}"  />
+        <Button Content="Calculate" HorizontalAlignment="Left" Margin="456,82,0,0" VerticalAlignment="Top" Width="75" Command="{Binding CalculateCommand}" />
+
+    </Grid>
+</Window>
